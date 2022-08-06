@@ -1,3 +1,5 @@
+import { Post } from 'types/graphql'
+
 import { render } from '@redwoodjs/testing/web'
 
 import Article from './Article'
@@ -7,8 +9,15 @@ import Article from './Article'
 
 describe('Article', () => {
   it('renders successfully', () => {
+    const article: Post = {
+      id: 0,
+      body: '',
+      title: '',
+      createdAt: '',
+    }
+
     expect(() => {
-      render(<Article />)
+      render(<Article article={article} />)
     }).not.toThrow()
   })
 })
