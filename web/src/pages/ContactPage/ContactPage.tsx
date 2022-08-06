@@ -1,4 +1,4 @@
-import {
+import type {
   CreateContactMutation,
   CreateContactMutationVariables,
 } from 'types/graphql'

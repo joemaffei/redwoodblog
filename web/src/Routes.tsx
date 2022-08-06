@@ -14,6 +14,10 @@ import PostsLayout from 'src/layouts/PostsLayout'
 import BlogLayout from './layouts/BlogLayout/BlogLayout'
 import ArticlePage from './pages/ArticlePage/ArticlePage'
 import ContactPage from './pages/ContactPage/ContactPage'
+import ForgotPasswordPage from './pages/ForgotPasswordPage/ForgotPasswordPage'
+import LoginPage from './pages/LoginPage/LoginPage'
+import ResetPasswordPage from './pages/ResetPasswordPage/ResetPasswordPage'
+import SignupPage from './pages/SignupPage/SignupPage'
 
 const Routes = () => {
   return (

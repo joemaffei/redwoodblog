@@ -1,9 +1,10 @@
 import { useEffect, useRef } from 'react'
+
 import { useAuth } from '@redwoodjs/auth'
+import { FieldError, Form, Label, Submit, TextField } from '@redwoodjs/forms'
 import { navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 import { toast, Toaster } from '@redwoodjs/web/toast'
-import { Form, Label, TextField, Submit, FieldError } from '@redwoodjs/forms'
 
 const ForgotPasswordPage = () => {
   const { isAuthenticated, forgotPassword } = useAuth()
@@ -28,7 +29,9 @@ const ForgotPasswordPage = () => {
       // The function `forgotPassword.handler` in api/src/functions/auth.js has
       // been invoked, let the user know how to get the link to reset their
       // password (sent in email, perhaps?)
-      toast.success('A link to reset your password was sent to ' + response.email)
+      toast.success(
+        `A link to reset your password would have been sent to ${response.email}, but that hasn't been implemented yet!`
+      )
       navigate(routes.login())
     }
   }
